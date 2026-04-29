@@ -1,0 +1,76 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 4rem;
+  background-color: #F9F9F4;
+  border-top: 1px solid #eaeaea;
+  
+  &__left {
+    .footer__logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #002B1B;
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer__copyright {
+      color: #666666;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__center {
+    display: flex;
+    gap: 2rem;
+    
+    a {
+      color: #666666;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      
+      &:hover {
+        color: #002B1B;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 1rem;
+    
+    .footer__icon-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid #dddddd;
+      background-color: transparent;
+      color: #666666;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background-color: #ffffff;
+        border-color: #002B1B;
+        color: #002B1B;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    gap: 2rem;
+
+    &__center {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

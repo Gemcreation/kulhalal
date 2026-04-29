@@ -1,0 +1,349 @@
+.result-page {
+  padding: 3rem 2rem 6rem 2rem;
+  background-image: radial-gradient(#ecebd8 1px, transparent 1px);
+  background-size: 40px 40px;
+  min-height: calc(100vh - 80px);
+
+  .result-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.product-summary {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  display: flex;
+  gap: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+
+  &__image {
+    width: 150px;
+    height: 150px;
+    border-radius: 0.75rem;
+    background-color: #fcebd2; 
+    background-image: linear-gradient(135deg, #dfbc8a, #fcebd2);
+    flex-shrink: 0;
+  }
+
+  &__info {
+    flex: 1;
+    z-index: 2;
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      
+      &.status-halal {
+        background-color: #e6f4ea;
+        color: #137333;
+      }
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #002B1B;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta-info {
+      color: #777;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .summary-actions {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 2rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+
+      .btn-scan {
+        background-color: #002B1B;
+        color: white;
+        border: 1px solid #002B1B;
+        &:hover { background-color: #004028; transform: translateY(-1px); }
+      }
+
+      .btn-save {
+        background-color: transparent;
+        color: #9e623b;
+        border: 1px solid #dfbc8a;
+        &:hover { background-color: #fdfaf6; }
+      }
+    }
+  }
+
+  &__watermark {
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f5f5f5;
+    z-index: 1;
+  }
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+}
+
+.ingredients-column {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2rem;
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: #002B1B;
+    }
+
+    span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #999;
+      letter-spacing: 1px;
+    }
+  }
+
+  .ingredients-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+
+    .ingredient-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.5rem;
+      border-left: 4px solid #ddd;
+      background-color: #fafafa;
+
+      &.status-halal {
+        border-left-color: #10b981;
+        background-color: #f5fcf9;
+        .ingredient-badge { background-color: #d1f0df; color: #002B1B; }
+      }
+
+      &.status-mushbooh {
+        border-left-color: #d66a2a;
+        background-color: #fef9f5;
+        .ingredient-badge { background-color: #fde8d7; color: #b25823; }
+      }
+
+      &.status-haram {
+        border-left-color: #ef4444;
+        background-color: #fef2f2;
+        .ingredient-badge { background-color: #fecaca; color: #b91c1c; }
+      }
+
+      .ingredient-info {
+        h4 {
+          font-size: 1.05rem;
+          margin-bottom: 0.25rem;
+          color: #333;
+        }
+        p {
+          font-size: 0.85rem;
+          color: #666;
+          margin: 0;
+        }
+      }
+
+      .ingredient-badge {
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  .dietary-tags {
+    display: flex;
+    gap: 1rem;
+    
+    span {
+      background-color: #f1f0ec;
+      color: #555;
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.reasoning-column {
+  .reasoning-card {
+    background-color: #002B1B;
+    color: white;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    height: 100%;
+    
+    .icon-book {
+      color: #e0c88f;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .citation-block {
+      border-left: 2px solid #e0c88f;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+
+      .quote {
+        font-size: 1.05rem;
+        font-family: 'Playfair Display', serif;
+        color: rgba(255,255,255,0.9);
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+      }
+
+      .source {
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.7);
+        margin: 0;
+      }
+    }
+
+    .explanation-block {
+      p {
+        font-size: 0.95rem;
+        color: rgba(255,255,255,0.85);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+    }
+
+    .btn-fatwa {
+      width: 100%;
+      background-color: #f2ba7e;
+      color: #002B1B;
+      border: none;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.2s;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: #fcd5a8;
+      }
+    }
+  }
+}
+
+.precautionary-alert {
+  background-color: #fdf5f5;
+  border: 1px solid #fecaca;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+
+  .alert-icon {
+    color: #ef4444;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  .alert-content {
+    h4 {
+      color: #b91c1c;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+      color: #555;
+      font-size: 0.95rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-summary {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+    
+    &__image {
+      margin: 0 auto;
+    }
+
+    &__info {
+      .summary-actions {
+        justify-content: center;
+      }
+      .status-badge {
+        margin: 0 auto 1.5rem auto;
+      }
+    }
+
+    &__watermark {
+      top: 1rem;
+      right: 1rem;
+      transform: none;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .product-summary__info .summary-actions {
+    flex-direction: column;
+  }
+  .dietary-tags {
+    flex-wrap: wrap;
+  }
+}
