@@ -4,6 +4,7 @@ import { ingredients } from '../../data';
 import './KnowledgeBase.scss';
 
 const KnowledgeBase = () => {
+  // the main logical part to display some kind search and knowldge base
   const [searchTerm, setSearchTerm] = useState('');
   const [filter, setFilter] = useState('All');
 
@@ -28,11 +29,11 @@ const KnowledgeBase = () => {
             <input 
               type="text" 
               placeholder="Search by name or E-number (e.g. Lecithin, E120)..." 
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
           
+          {/* This is use to filter from provided option */}
           <div className="filter-pills">
             {['All', 'Halal', 'Haram', 'Doubtful'].map(f => (
               <button 
@@ -72,6 +73,7 @@ const KnowledgeBase = () => {
         )}
       </div>
 
+        {/* User message from me (GEM) incase they can't find what they need */}
       <div className="kb-request-banner">
         <div className="banner-content">
           <h2>Didn't find what you're looking for?</h2>
