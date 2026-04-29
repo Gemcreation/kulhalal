@@ -134,7 +134,8 @@ const Home = () => {
   );
 };
 
-// Extracted SVGs to keep code clean and dependency-light
+// have to use an external svg not provided by react for both globe and user icons
+// here is the extracted SVGs to keep my code clean and dependency light
 const GlobeIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{color: '#9e623b', marginBottom: '1rem'}}><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
 );
