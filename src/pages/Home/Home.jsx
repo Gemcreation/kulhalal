@@ -27,11 +27,14 @@ const Home = () => {
               <Camera size={18} /> Scan Now
             </button>
             <button className="btn-secondary">How it works</button>
+            {/* more like a cta */}
           </div>
         </div>
         <div className="home__hero-visual">
           <div className="mockup-placeholder">
-            <div className="mockup-img"></div>
+            <div className="mockup-img">
+              {/* needs proper image to display halal foods and islamic verse */}
+            </div>
             <div className="mockup-badge">
               <CheckCircle size={16} color="#002B1B" />
               <span>Certified Halal<br/><small>Purity Guaranteed</small></span>
@@ -41,6 +44,7 @@ const Home = () => {
       </section>
 
       {/* Process Section */}
+      {/* This is will just explain some simple steps about this website */}
       <section className="home__process">
         <h2>Verification in Seconds</h2>
         <p>Our three-step process ensures you never have to second-guess what's on your plate.</p>

@@ -1,7 +1,7 @@
-/**
- * Navbar Component
- * Navigation header with logo, main links, and sign-in button.
- */
+
+//  Navbar Component
+//  Navigation header with logo, main links, and sign-in button though without proper function.
+
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './Navbar.scss';
