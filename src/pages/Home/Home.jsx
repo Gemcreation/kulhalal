@@ -5,6 +5,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Camera, Search, CheckCircle, Apple, Play } from 'lucide-react';
+//import heroProduct from "../../assets/image/hero-image.png";
 import './Home.scss';
 
 const Home = () => {
@@ -33,6 +34,7 @@ const Home = () => {
         <div className="home__hero-visual">
           <div className="mockup-placeholder">
             <div className="mockup-img">
+              {/* <img src={heroProduct} alt="Halal Product" /> */}
               {/* needs proper image to display halal foods and islamic verse */}
             </div>
             <div className="mockup-badge">
