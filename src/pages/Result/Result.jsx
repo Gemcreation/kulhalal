@@ -10,7 +10,7 @@ const Result = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    // Attempt to get scan ID from router state, default to mock data
+    // I'm Attempting to get scan ID from router state, default to mock data
     const scanId = location.state?.scanId || 'KH-99281';
     setData(mockProductResults[scanId]);
   }, [location.state]);
@@ -45,7 +45,8 @@ const Result = () => {
           </div>
         </section>
 
-        {/* Detailed Breakdown */}
+        {/* Detailed Breakdown */} 
+        {/* but all the result that will display is still a demo mock up and not a real result */}
         <div className="details-grid">
           
           <div className="ingredients-column">
