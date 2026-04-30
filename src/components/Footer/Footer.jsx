@@ -11,7 +11,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__left">
         <h2 className="footer__logo">KulHalal</h2>
-        <p className="footer__copyright">© 2024 KulHalal. Purity and Certainty in every bite.</p>
+        <p className="footer__copyright">© 2026 KulHalal. Purity and Certainty in every bite.</p>
+        <p className="footer__copyright">Abdulmojeed Ibrahim</p>
       </div>
       <div className="footer__center">
         <a href="#contact">Contact Us</a>
